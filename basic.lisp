@@ -15,6 +15,3 @@
 (defun verbose-sum (x y)
   (format t "Summing ~d and ~d.~%" x y)
   (+ x y))
-
-(verbose-sum 1 3)
-
