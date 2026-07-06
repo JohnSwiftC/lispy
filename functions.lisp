@@ -56,3 +56,7 @@
   (funcall func val))
 
 (do-something-to #'mult-by-two 8) ; returns 16
+
+; but its even better in many cases to just use a lambda
+
+(do-something-to #'(lambda (a) (* a 3)) 8) ; returns 24
