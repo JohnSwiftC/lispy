@@ -19,3 +19,11 @@
 
 (create-rectangle 2)
 (create-rectangle 2 4)
+
+; rest parameters, captures any extra values
+; into the parameter as a list
+
+(defun rest-demo (a &rest others)
+  (list a others))
+
+(rest-demo 1 2 3 "string lol") ; shows a list with 2 elements, the value 1, and a list containing all of the other elements
