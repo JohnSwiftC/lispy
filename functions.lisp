@@ -27,3 +27,13 @@
   (list a others))
 
 (rest-demo 1 2 3 "string lol") ; shows a list with 2 elements, the value 1, and a list containing all of the other elements
+
+; functions can also be given keyed parameters,
+; which is sort of like how you can name your parameters
+; in python. these more or less must then be keyed by keywords
+
+(defun keyed-function (&key (a 0) (b a) (apple (+ a b)))
+  (list a b apple))
+
+(keyed-function :a 1)
+(keyed-function :a 2 :b 12)
