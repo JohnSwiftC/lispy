@@ -37,3 +37,22 @@
 
 (keyed-function :a 1)
 (keyed-function :a 2 :b 12)
+
+; functions can be passed as data
+; like QUOTE, which has sugar with '
+; function has sugar with #'
+; these can be passed around as data
+; and invoked with funcall or apply
+;
+; the difference between funcall and apply
+; is that funcall takes a rest parameter and can
+; be called like any other function. apply takes a single
+; parameter of type list and applies those as if they were arguments
+
+(defun mult-by-two (a)
+  (* a 2))
+
+(defun do-something-to (func val)
+  (funcall func val))
+
+(do-something-to #'mult-by-two 8) ; returns 16
