@@ -12,4 +12,9 @@
 (defun fib(n)
   (if (< n 2) n (+ (fib (- n 1)) (fib (- n 2)))))
 
-(fib 7)
+(defun verbose-sum (x y)
+  (format t "Summing ~d and ~d.~%" x y)
+  (+ x y))
+
+(verbose-sum 1 3)
+
